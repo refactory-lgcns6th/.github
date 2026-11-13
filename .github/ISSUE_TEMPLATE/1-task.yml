@@ -1,0 +1,56 @@
+name: 작업
+description: 개발할 기능, 수정, 기타 작업을 등록할 때
+title: "feat : [영역] 할 일"
+body:
+  - type: input
+    id: area
+    attributes:
+      label: 영역
+      description: be, fe, iot, infra처럼 적는다. MSA로 나뉘면 서비스 이름을 적는다.
+      placeholder: be
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 작업 목적
+      description: 이 작업이 필요한 이유를 간단히 적는다.
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 작업 내용
+      description: 구현하거나 수정할 내용을 적는다.
+      placeholder: "- "
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 완료 조건
+      description: 작업이 끝났는지 확인할 수 있는 기준을 체크리스트로 적는다.
+      placeholder: "- [ ] "
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: 다른 영역 영향
+      description: 다른 영역(서비스)과 주고받는 것이 바뀌면 고른다. 바뀌는 게 있으면 계약 변경 이슈도 함께 올린다.
+      multiple: true
+      options:
+        - 없음
+        - API
+        - 이벤트·메시지
+        - DB 스키마
+        - 공통 설정
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 참고 사항
+      description: 참고할 문서, 화면, 주의사항이 있으면 적는다.
+    validations:
+      required: false

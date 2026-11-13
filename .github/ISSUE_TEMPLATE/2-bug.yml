@@ -1,0 +1,46 @@
+name: 버그
+description: 기대한 대로 동작하지 않을 때
+title: "fix : [영역] 어디서 무엇이"
+labels: [bug]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: 어디서
+      description: 화면 이름, API 경로, 서비스 이름 중 해당하는 것을 적는다.
+      placeholder: "POST /api/..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 순서
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대한 결과
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 실제 결과
+      description: 화면 캡처, 에러 메시지 원문, 응답 JSON을 붙인다.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 급한 정도
+      options:
+        - 서비스가 멈춤 (바로 고쳐야 함)
+        - 동작은 하는데 틀림
+        - 사소함
+    validations:
+      required: true

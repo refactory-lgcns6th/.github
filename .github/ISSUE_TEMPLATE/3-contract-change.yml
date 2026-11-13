@@ -1,0 +1,48 @@
+name: 계약 변경
+description: 다른 영역(서비스)과 주고받는 API, 이벤트·메시지, DB 스키마, 공통 설정을 바꾸고 싶을 때
+title: "docs : 계약 변경 - 무엇을 바꾸나"
+labels: [documentation]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > 이 이슈를 올리면 팀 채널에도 링크를 공유한다. 관련 담당자가 OK하기 전에는 코드를 먼저 바꾸지 않는다.
+  - type: dropdown
+    id: target
+    attributes:
+      label: 바꿀 대상
+      multiple: true
+      options:
+        - API
+        - 이벤트·메시지
+        - DB 스키마
+        - 공통 설정
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 지금
+      description: 지금 문서나 코드에 정해져 있는 내용을 적는다.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: 바꾸고 싶은 것
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 왜
+      description: 처음 생각, 확인한 내용, 바뀐 판단 순서로 적는다.
+    validations:
+      required: true
+  - type: textarea
+    id: affected
+    attributes:
+      label: 영향받는 영역·담당자
+      description: 영향받는 영역(서비스)을 적고 담당자를 태그한다.
+    validations:
+      required: true
