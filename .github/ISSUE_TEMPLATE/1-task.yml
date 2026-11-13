@@ -1,4 +1,4 @@
-name: 작업
+name: 작업 이슈
 description: 개발할 기능, 수정, 기타 작업을 등록할 때
 title: "feat : [영역] 할 일"
 body:
